@@ -1,4 +1,4 @@
-const INPUT: &str = include_str!("../input/d1p1.txt");
+const INPUT: &str = include_str!("../input/d1.txt");
 
 fn main() -> anyhow::Result<()> {
     let mut elves = INPUT
