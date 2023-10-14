@@ -4,7 +4,7 @@ const INPUT: &str = include_str!("../input/d3.txt");
 
 fn main() -> anyhow::Result<()> {
     let p1 = INPUT
-        .split('\n')
+        .lines()
         .map(|s| s.split_at(s.len() / 2))
         .map(|(l, r)| {
             l.chars().find(|ch| {
@@ -15,7 +15,7 @@ fn main() -> anyhow::Result<()> {
         .sum::<usize>();
     println!("{p1}");
     let p2 = INPUT
-        .split('\n')
+        .lines()
         .batching(|it| {
             it.next_tuple::<(&str,&str,&str)>()
         })

@@ -4,7 +4,7 @@ fn main() -> anyhow::Result<()> {
     let mut elves = INPUT
         .split("\n\n")
         .map(|elf| {
-            elf.split('\n')
+            elf.lines()
                 .map(|s| s.parse::<usize>().expect("Failed to parse input"))
                 .sum::<usize>()
         })

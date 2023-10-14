@@ -19,7 +19,7 @@ fn main() -> anyhow::Result<()> {
     ];
     let mut p1c = input.clone();
     let p1m = moves
-        .split('\n')
+        .lines()
         .map(Move::from);
     for mv in p1m {
         for _ in 0..mv.0 {
@@ -34,7 +34,7 @@ fn main() -> anyhow::Result<()> {
     println!("{p1}");
     let mut p2c = input;
     let p2m = moves
-        .split('\n')
+        .lines()
         .map(Move::from);
     for mv in p2m {
         let mut temp = vec![];

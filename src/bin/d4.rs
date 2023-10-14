@@ -2,13 +2,13 @@ const INPUT: &str = include_str!("../input/d4.txt");
 
 fn main() -> anyhow::Result<()> {
     let p1 = INPUT
-        .split('\n')
+        .lines()
         .map(Pair::from)
         .filter(ranges_contain_each_other)
         .count();
     println!("{p1}");
     let p2 = INPUT
-        .split('\n')
+        .lines()
         .map(Pair::from)
         .filter(ranges_overlap)
         .count();
